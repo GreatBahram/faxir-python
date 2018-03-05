@@ -1,0 +1,7 @@
+{
+  "client_id": "APIK-Qqegex8xVP",
+  "client_secret": "1ZDTm16Tt4GJL1k",
+  "redirect_uri": "http://localhost:8080/cb/",
+  "authorization_server_url": "http://accounts.fax.ir",
+  "resource_server_url": "http://api.fax.ir/v2"
+}

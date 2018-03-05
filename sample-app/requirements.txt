@@ -1,0 +1,4 @@
+faxir-api==0.1
+Flask==0.12.2
+requests==2.18.4
+
