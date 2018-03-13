@@ -35,7 +35,7 @@ with open(os.path.join(os.path.dirname(__file__), 'config.json'), 'r') as f:
 
 client_id = config['client_id']
 client_secret = config['client_secret']
-client_basic_auth = base64.b64encode(six.b('{}:{}'.format(client_id, client_secret)))
+client_basic_auth = base64.b64encode(six.b('{}:{}'.format(client_id, client_secret))).decode('utf-8')
 redirect_uri = config['redirect_uri']
 authorization_server_url = config['authorization_server_url']
 
