@@ -128,6 +128,8 @@ def cb():
     data = res.json()
     access_token = data.get('access_token')
     refresh_token = data.get('refresh_token')
+    if not access_token:
+        return Response(json.dumps(data), res.status_code)
     resp = Response("<script>window.location='/'</script>")
     resp.set_cookie('access_token', access_token, path='/', httponly=True)
     resp.set_cookie('refresh_token', refresh_token, path='/', httponly=True)
@@ -189,7 +191,7 @@ def numbers_requests():
             result = number.to_dict()
         else:
             numbers = client.list_numbers()
-            result = numbers
+            result = numbers.to_dict()
     elif method == 'delete':
         client.revoke_number(request.args['resource_id'])
         result = {'result': 'number revoked successfully'}

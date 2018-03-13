@@ -33,14 +33,42 @@ class ResponseNumberList(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'numbers': 'list[Number]'
     }
 
     attribute_map = {
+        'numbers': 'numbers'
     }
 
-    def __init__(self):  # noqa: E501
+    def __init__(self, numbers=None):  # noqa: E501
         """ResponseNumberList - a model defined in Swagger"""  # noqa: E501
+
+        self._numbers = None
         self.discriminator = None
+
+        if numbers is not None:
+            self.numbers = numbers
+
+    @property
+    def numbers(self):
+        """Gets the numbers of this ResponseNumberList.  # noqa: E501
+
+
+        :return: The numbers of this ResponseNumberList.  # noqa: E501
+        :rtype: list[Number]
+        """
+        return self._numbers
+
+    @numbers.setter
+    def numbers(self, numbers):
+        """Sets the numbers of this ResponseNumberList.
+
+
+        :param numbers: The numbers of this ResponseNumberList.  # noqa: E501
+        :type: list[Number]
+        """
+
+        self._numbers = numbers
 
     def to_dict(self):
         """Returns the model properties as a dict"""
